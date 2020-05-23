@@ -1,0 +1,27 @@
+// Vars
+@import 'variables/vars';
+
+// Fonts
+@import '../css/fonts.css';
+
+// Reset
+@import 'reset';
+
+// Grid
+@import 'grid/grid';
+
+// Common-styles
+@import 'common-styles/common';
+
+// Blocks
+@import 'blocks/header';
+@import 'blocks/about';
+@import 'blocks/work';
+@import 'blocks/dishes';
+@import 'blocks/chefs';
+@import 'blocks/recipies';
+@import 'blocks/social';
+@import 'blocks/footer';
+
+// Media
+@import 'media';

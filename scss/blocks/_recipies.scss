@@ -1,0 +1,145 @@
+.recipies {
+
+    .section-title {
+        &::before {
+            content: 'Recipies';
+        }
+    }
+
+    &-left {
+        background: url("../img/assets/post-1.jpg") no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    &-left, &-right {
+        @include col-6();
+    }
+
+    &-article {
+        padding: 60px 90px;
+        text-align: center;
+
+        &:hover {
+            .recipies-article__link {
+                opacity: 1;
+            }
+        }
+
+        &__link {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 2.5rem;
+            color: #000;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &__date, &__author {
+            font-size: 0.875rem;
+            line-height: 2.14;
+        }
+
+        &__text {
+            margin: 25px 0 45px;
+        }
+
+        &__author {
+            margin-bottom: 60px;
+        }
+    }
+
+    &-statistics {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-post {
+        padding: 30px;
+        background-color: $darkGray;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        transition: all 0.4s ease-in-out;
+        @media (max-width: 768px) {
+            margin-top: 30px;
+        }
+
+        &:hover {
+            background-color: $green;
+
+            .stats-ico {
+                color: #000;
+            }
+        }
+
+        &:nth-child(2) {
+            background: url('../img/assets/post.jpg') no-repeat;
+            background-size: cover;
+
+            &:hover {
+
+                .stats-ico {
+                    color: #fff;
+                }  
+
+            }
+        }
+
+        &__text {
+            margin-bottom: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 0.875rem;
+            }
+
+            @media (max-width: 568) {
+                font-size: 0.75rem;
+            }
+        }
+
+        &-type {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            @media (max-width: 568px) {
+                justify-content: center;
+            }
+    
+            .type {
+                margin-bottom: 0;
+            }
+    
+            .recipies-article__date {
+                margin-left: 15px;
+            }
+    
+            .recipies-statistics {
+                margin-left: auto;
+
+                @media (max-width: 568px) {
+                    margin: 10px 0 0;
+                }
+            }
+    
+        }
+    }
+
+    &-post + &-post {
+        margin-top: 30px;
+    }
+
+}
+
+.statistics-item {
+    display: flex;
+    align-items: center;
+
+    .num {
+        margin-left: 12px;
+    }
+
+    &:nth-child(2) {
+        margin-left: 26px;
+    }
+}

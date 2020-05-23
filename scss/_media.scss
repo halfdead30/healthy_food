@@ -1,0 +1,7 @@
+.work, .chefs, .social {
+    &-item {
+        @media (max-width: 568px) {
+            width: calc(100% - 30px);
+        }
+    }
+}

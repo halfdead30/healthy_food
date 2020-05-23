@@ -1,0 +1,100 @@
+.header {
+
+    &--modifier {
+        background: url('../img/header-bg.png') no-repeat;
+        background-size: cover;
+        padding-bottom: 162px;
+
+        @media (max-width: 568px) {
+            padding-bottom: 100px;
+        }
+    }
+
+    &-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        line-height: 90px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        z-index: 999;
+        transition: all 0.4s ease-in-out;
+
+        &.sticky {
+            background-color: rgba(37, 37, 37, 0.9);
+        }
+    }
+
+    &-menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: auto;
+
+        &.show {
+            display: flex;
+        }
+        
+        @media (max-width: 991px) {
+            display: none;
+            background: $darkGray;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 -15px;
+        }
+
+        @media (max-width: 568px) {
+            margin: 0;
+        }
+
+        &__link + &__link {
+            margin-left: 38px;
+            @media (max-width: 768px) {
+                margin-left: 0;
+            }
+        }
+
+        &__link {
+            a {
+                font-weight: 700;
+                @media (max-width: 768px) {
+                    font-size: 1.875rem;
+                }
+            }
+        }
+    }
+
+    &-content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 171px 0 70px;
+        text-align: center;
+
+        @media (max-width: 568px) {
+            padding: 130px 15px 20px;
+        }
+
+        &__title {
+            @media (max-width: 568px) {
+                font-size: 2rem;
+            }
+        }
+
+        &__text {
+            display: block;
+            max-width: 595px;
+            margin: 0 auto;
+            padding: 16px 0 40px;
+            letter-spacing: -0.2px;
+            opacity: 0.7;
+
+            @media (max-width: 568px) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+}

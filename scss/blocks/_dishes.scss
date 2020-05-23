@@ -1,0 +1,76 @@
+.dishes {
+
+    .section-title {
+        &:before {
+            content: 'Dishes';
+        }
+    }
+
+    &-card {
+        @include col-3();
+        background: $darkGray;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+
+        &:hover {
+            .dishes-img {
+                .reply-link {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:nth-child(n+4) {
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            width: calc(100% / 12 * 6 - 30px);
+
+            &:nth-child(n+3) {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 568px) {
+            width: calc(100% - 30px);
+
+            &:nth-child(2) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &-img {
+        img {
+            border-radius: 6px 6px 0 0;
+        }
+    }
+
+    &-article {
+        padding: 30px;
+
+        &__title {
+            font-size: 1.875rem;
+            color: $titleColor;
+            line-height: 0.94;
+            letter-spacing: 0;
+        }
+
+        &__subtitle {
+            font-size: 0.75rem;
+            line-height: 1.3;
+            letter-spacing: -0.15px;
+            color: #A4A8B2;
+        }
+
+        &__text {
+            font-size: 0.8125rem;
+            line-height: 1.38;
+            letter-spacing: -0.1625px;
+            color: #85878C;
+            margin: 20px 0 28px;
+        }
+    }
+
+}
